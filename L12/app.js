@@ -1,5 +1,5 @@
 // create some arrays
-const numbers = [43,56,33,23,44,36,5];
+const numbers = [43, 56, 33, 23, 44, 36, 5];
 const numbers2 = new Array(7, 8, 9, 10, 11, 12);
 const fruit = ["apple", "orange", "bananan", "pear"];
 const mixed = [22, "hello", true, undefined, null, { a: 1, b: 2 }, new Date()];
@@ -35,12 +35,25 @@ val = numbers.indexOf(100);
 // val = numbers.concat(numbers2);
 
 // Sorting arrays
-val = fruit.sort();
-val = numbers.sort();
+// val = fruit.sort();
+// val = numbers.sort();
 
-val = numbers.sort(function(a, b){
-  return a - b;
-})
+// // Use the compare funciton
+// val = numbers.sort(function(a, b) {
+//   return a - b;
+// });
+
+// // Reverse sort
+// val = numbers.sort(function(a, b) {
+//   return b - a;
+// });
+
+// Find
+function over50(num) {
+  return num > 50;
+}
+
+val = numbers.find(over50);
 
 console.log(numbers);
 console.log(val);
